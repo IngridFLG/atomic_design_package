@@ -25,3 +25,4 @@ export 'templates/product_list_template.dart';
 
 // Exports de Pages
 export 'pages/product_list_page.dart';
+export 'pages/login_register_page.dart';
