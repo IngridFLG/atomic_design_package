@@ -5,6 +5,10 @@ export 'tokens/colors.dart';
 export 'tokens/spacing.dart';
 export 'tokens/typography.dart';
 
+//Exports de foundation
+export 'foundation/theme.dart';
+export 'foundation/styles.dart';
+
 // Exports de Atoms
 export 'atoms/button.dart';
 export 'atoms/icon.dart';
