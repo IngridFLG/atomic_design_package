@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import '../atoms/input_field.dart';
-import '../atoms/button.dart';
 
-/// Un formulario de inicio de sesión.
-/// Parámetros:
-/// - [onLogin]: Función que se ejecuta al enviar el formulario.
+/// Formulario para iniciar sesión.
 class LoginForm extends StatelessWidget {
   final VoidCallback onLogin;
   final TextEditingController usernameController;
@@ -20,22 +16,20 @@ class LoginForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        AtomicInputField(
-          labelText: 'Usuario',
+        TextField(
           controller: usernameController,
+          decoration: const InputDecoration(labelText: 'Usuario'),
         ),
-        const SizedBox(height: 16),
-        AtomicInputField(
-          labelText: 'Contraseña',
+        TextField(
           controller: passwordController,
-          isPassword: true,
+          decoration: const InputDecoration(labelText: 'Contraseña'),
+          obscureText: true,
         ),
-        const SizedBox(height: 24),
-        AtomicButton(
-          label: const Text('Iniciar Sesión'),
+        const SizedBox(height: 16.0),
+        ElevatedButton(
           onPressed: onLogin,
+          child: const Text('Iniciar Sesión'),
         ),
       ],
     );

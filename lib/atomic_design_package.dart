@@ -16,9 +16,13 @@ export 'atoms/text.dart';
 
 // Exports de Molecules
 export 'molecules/button_with_icon_and_text.dart';
+export 'molecules/login_form.dart';
+export 'molecules/register_form.dart';
 
 // Exports de Organisms
 export 'organisms/product_card.dart';
+export 'organisms/header.dart';
+export 'organisms/login_register_tabs.dart';
 
 // Exports de Templates
 export 'templates/product_list_template.dart';

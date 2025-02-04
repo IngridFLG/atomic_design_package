@@ -16,9 +16,15 @@ class Header extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title, style: Theme.of(context).textTheme.displayLarge),
+        Text(
+          title,
+          style: Theme.of(context).textTheme.displayLarge,
+        ),
         const SizedBox(height: 8),
-        Text(subtitle, style: Theme.of(context).textTheme.bodyLarge),
+        Text(
+          subtitle,
+          style: Theme.of(context).textTheme.bodyLarge,
+        ),
       ],
     );
   }
