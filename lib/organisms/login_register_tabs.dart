@@ -40,6 +40,7 @@ class _LoginRegisterTabsState extends State<LoginRegisterTabs> {
               Tab(text: 'Registrarse'),
             ],
           ),
+          const SizedBox(height: 16.0),
           Expanded(
             child: TabBarView(
               children: [
