@@ -36,7 +36,7 @@ class _LoginRegisterTabsState extends State<LoginRegisterTabs> {
         children: [
           const TabBar(
             tabs: [
-              Tab(text: 'Iniciar Sesión'),
+              Tab(text: 'Iniciar Sesións'),
               Tab(text: 'Registrarse'),
             ],
           ),
