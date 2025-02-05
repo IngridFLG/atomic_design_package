@@ -41,7 +41,7 @@ class _LoginRegisterTabsState extends State<LoginRegisterTabs> {
             ],
           ),
           const SizedBox(height: 50),
-          Expanded(
+          Flexible(
             child: TabBarView(
               children: [
                 LoginForm(

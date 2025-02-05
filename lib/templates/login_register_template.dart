@@ -27,24 +27,29 @@ class LoginRegisterTemplate extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          const Header(
-            title: 'Bienvenido',
-            subtitle: 'Por favor inicia sesión o regístrate para continuar',
-          ),
-          const SizedBox(height: 24.0),
-          LoginRegisterTabs(
-            onLogin: onLogin,
-            onRegister: onRegister,
-            loginUsernameController: loginUsernameController,
-            loginPasswordController: loginPasswordController,
-            registerUsernameController: registerUsernameController,
-            registerEmailController: registerEmailController,
-            registerPasswordController: registerPasswordController,
-          ),
-        ],
+      child: ConstrainedBox(
+        constraints: BoxConstraints(maxHeight: MediaQuery.of(context).size.height),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            const Header(
+              title: 'Bienvenido',
+              subtitle: 'Por favor inicia sesión o regístrate para continuar',
+            ),
+            const SizedBox(height: 24.0),
+            Flexible(
+              child: LoginRegisterTabs(
+                onLogin: onLogin,
+                onRegister: onRegister,
+                loginUsernameController: loginUsernameController,
+                loginPasswordController: loginPasswordController,
+                registerUsernameController: registerUsernameController,
+                registerEmailController: registerEmailController,
+                registerPasswordController: registerPasswordController,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
