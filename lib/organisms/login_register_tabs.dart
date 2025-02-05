@@ -28,6 +28,7 @@ class LoginRegisterTabs extends StatelessWidget {
     return DefaultTabController(
       length: 2,
       child: Column(
+        mainAxisSize: MainAxisSize.min, // Ajusta el tamaño del Column al contenido.
         children: [
           const TabBar(
             labelColor: Colors.black,
