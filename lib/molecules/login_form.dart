@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../atoms/input_field.dart';
+import '../atoms/button.dart';
 
 /// Formulario para iniciar sesión.
 class LoginForm extends StatelessWidget {
@@ -17,19 +19,20 @@ class LoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        TextField(
+        AtomicInputField(
+          labelText: 'Usuario',
           controller: usernameController,
-          decoration: const InputDecoration(labelText: 'Usuario'),
         ),
-        TextField(
+        const SizedBox(height: 16),
+        AtomicInputField(
+          labelText: 'Contraseña',
           controller: passwordController,
-          decoration: const InputDecoration(labelText: 'Contraseña'),
-          obscureText: true,
+          isPassword: true,
         ),
-        const SizedBox(height: 16.0),
-        ElevatedButton(
+        const SizedBox(height: 32),
+        AtomicButton(
+          label: const Text('Iniciar Sesión'),
           onPressed: onLogin,
-          child: const Text('Iniciar Sesión'),
         ),
       ],
     );

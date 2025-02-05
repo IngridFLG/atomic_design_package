@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import '../molecules/login_form.dart';
 import '../molecules/register_form.dart';
 
-/// Un organismo que contiene pestañas para Login y Registro.
-class LoginRegisterTabs extends StatefulWidget {
+/// Organismo que contiene las pestañas para Login y Registro.
+class LoginRegisterTabs extends StatelessWidget {
   final VoidCallback onLogin;
   final VoidCallback onRegister;
   final TextEditingController loginUsernameController;
@@ -24,36 +24,33 @@ class LoginRegisterTabs extends StatefulWidget {
   });
 
   @override
-  State<LoginRegisterTabs> createState() => _LoginRegisterTabsState();
-}
-
-class _LoginRegisterTabsState extends State<LoginRegisterTabs> {
-  @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 2,
       child: Column(
         children: [
           const TabBar(
+            labelColor: Colors.black,
+            indicatorColor: Colors.blue,
             tabs: [
-              Tab(text: 'Iniciar Sesións'),
+              Tab(text: 'Iniciar Sesión'),
               Tab(text: 'Registrarse'),
             ],
           ),
-          const SizedBox(height: 50),
+          const SizedBox(height: 24),
           Flexible(
             child: TabBarView(
               children: [
                 LoginForm(
-                  onLogin: widget.onLogin,
-                  usernameController: widget.loginUsernameController,
-                  passwordController: widget.loginPasswordController,
+                  onLogin: onLogin,
+                  usernameController: loginUsernameController,
+                  passwordController: loginPasswordController,
                 ),
                 RegisterForm(
-                  onRegister: widget.onRegister,
-                  usernameController: widget.registerUsernameController,
-                  emailController: widget.registerEmailController,
-                  passwordController: widget.registerPasswordController,
+                  onRegister: onRegister,
+                  usernameController: registerUsernameController,
+                  emailController: registerEmailController,
+                  passwordController: registerPasswordController,
                 ),
               ],
             ),
