@@ -13,6 +13,8 @@ export 'foundation/styles.dart';
 export 'atoms/button.dart';
 export 'atoms/icon.dart';
 export 'atoms/text.dart';
+export 'atoms/input_field.dart';
+export 'atoms/label_text.dart';
 
 // Exports de Molecules
 export 'molecules/button_with_icon_and_text.dart';
@@ -26,6 +28,8 @@ export 'organisms/login_register_tabs.dart';
 
 // Exports de Templates
 export 'templates/product_list_template.dart';
+export 'templates/login_register_template.dart';
+export 'templates/auth_template.dart';
 
 // Exports de Pages
 export 'pages/product_list_page.dart';
