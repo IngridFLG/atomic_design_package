@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../molecules/register_form.dart';
 
 class RegisterOrganism extends StatelessWidget {
-  final VoidCallback onRegister;
   final TextEditingController emailController;
   final TextEditingController usernameController;
   final TextEditingController passwordController;
@@ -15,10 +14,10 @@ class RegisterOrganism extends StatelessWidget {
   final TextEditingController latitudeController;
   final TextEditingController longitudeController;
   final TextEditingController phoneController;
+  final VoidCallback onRegister;
 
   const RegisterOrganism({
     super.key,
-    required this.onRegister,
     required this.emailController,
     required this.usernameController,
     required this.passwordController,
@@ -31,12 +30,12 @@ class RegisterOrganism extends StatelessWidget {
     required this.latitudeController,
     required this.longitudeController,
     required this.phoneController,
+    required this.onRegister,
   });
 
   @override
   Widget build(BuildContext context) {
     return RegisterForm(
-      onRegister: onRegister,
       emailController: emailController,
       usernameController: usernameController,
       passwordController: passwordController,
@@ -49,6 +48,7 @@ class RegisterOrganism extends StatelessWidget {
       latitudeController: latitudeController,
       longitudeController: longitudeController,
       phoneController: phoneController,
+      onRegister: onRegister,
     );
   }
 }

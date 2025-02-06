@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import '../organisms/login_organism.dart';
 
 class LoginTemplate extends StatelessWidget {
-  final VoidCallback onLogin;
-  final VoidCallback onRegisterTap;
   final TextEditingController usernameController;
   final TextEditingController passwordController;
+  final VoidCallback onLogin;
+  final VoidCallback onRegisterTap;
 
   const LoginTemplate({
     super.key,
-    required this.onLogin,
-    required this.onRegisterTap,
     required this.usernameController,
     required this.passwordController,
+    required this.onLogin,
+    required this.onRegisterTap,
   });
 
   @override
@@ -37,10 +37,10 @@ class LoginTemplate extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             LoginOrganism(
-              onLogin: onLogin,
-              onRegisterTap: onRegisterTap,
               usernameController: usernameController,
               passwordController: passwordController,
+              onLogin: onLogin,
+              onRegisterTap: onRegisterTap,
             ),
           ],
         ),

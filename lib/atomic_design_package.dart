@@ -14,7 +14,6 @@ export 'atoms/button.dart';
 export 'atoms/icon.dart';
 export 'atoms/text.dart';
 export 'atoms/input_field.dart';
-export 'atoms/label_text.dart';
 
 // Exports de Molecules
 export 'molecules/login_form.dart';

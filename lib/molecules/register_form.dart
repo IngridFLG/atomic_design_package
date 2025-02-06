@@ -3,7 +3,6 @@ import '../atoms/input_field.dart';
 import '../atoms/button.dart';
 
 class RegisterForm extends StatelessWidget {
-  final VoidCallback onRegister;
   final TextEditingController emailController;
   final TextEditingController usernameController;
   final TextEditingController passwordController;
@@ -16,10 +15,10 @@ class RegisterForm extends StatelessWidget {
   final TextEditingController latitudeController;
   final TextEditingController longitudeController;
   final TextEditingController phoneController;
+  final VoidCallback onRegister;
 
   const RegisterForm({
     super.key,
-    required this.onRegister,
     required this.emailController,
     required this.usernameController,
     required this.passwordController,
@@ -32,6 +31,7 @@ class RegisterForm extends StatelessWidget {
     required this.latitudeController,
     required this.longitudeController,
     required this.phoneController,
+    required this.onRegister,
   });
 
   @override
@@ -101,7 +101,7 @@ class RegisterForm extends StatelessWidget {
         ),
         const SizedBox(height: 32),
         AtomicButton(
-          label: const Text('Enviar'),
+          label: const Text('Aceptar'),
           onPressed: onRegister,
         ),
       ],

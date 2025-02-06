@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../organisms/register_organism.dart';
 
 class RegisterTemplate extends StatelessWidget {
-  final VoidCallback onRegister;
   final TextEditingController emailController;
   final TextEditingController usernameController;
   final TextEditingController passwordController;
@@ -15,10 +14,10 @@ class RegisterTemplate extends StatelessWidget {
   final TextEditingController latitudeController;
   final TextEditingController longitudeController;
   final TextEditingController phoneController;
+  final VoidCallback onRegister;
 
   const RegisterTemplate({
     super.key,
-    required this.onRegister,
     required this.emailController,
     required this.usernameController,
     required this.passwordController,
@@ -31,6 +30,7 @@ class RegisterTemplate extends StatelessWidget {
     required this.latitudeController,
     required this.longitudeController,
     required this.phoneController,
+    required this.onRegister,
   });
 
   @override
@@ -43,12 +43,11 @@ class RegisterTemplate extends StatelessWidget {
           children: [
             const SizedBox(height: 40),
             const Text(
-              'Registrarse',
+              'Register',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 24),
             RegisterOrganism(
-              onRegister: onRegister,
               emailController: emailController,
               usernameController: usernameController,
               passwordController: passwordController,
@@ -61,6 +60,7 @@ class RegisterTemplate extends StatelessWidget {
               latitudeController: latitudeController,
               longitudeController: longitudeController,
               phoneController: phoneController,
+              onRegister: onRegister,
             ),
           ],
         ),

@@ -4,16 +4,16 @@ import '../atoms/button.dart';
 import '../atoms/link_text.dart';
 
 class LoginForm extends StatelessWidget {
-  final VoidCallback onLogin;
   final TextEditingController usernameController;
   final TextEditingController passwordController;
+  final VoidCallback onLogin;
   final VoidCallback onRegisterTap;
 
   const LoginForm({
     super.key,
-    required this.onLogin,
     required this.usernameController,
     required this.passwordController,
+    required this.onLogin,
     required this.onRegisterTap,
   });
 
@@ -36,13 +36,13 @@ class LoginForm extends StatelessWidget {
         Align(
           alignment: Alignment.center,
           child: AtomicLinkText(
-            text: 'Registrarse',
+            text: 'Register here',
             onTap: onRegisterTap,
           ),
         ),
         const SizedBox(height: 32),
         AtomicButton(
-          label: const Text('Iniciar sesión'),
+          label: const Text('Login'),
           onPressed: onLogin,
         ),
       ],
