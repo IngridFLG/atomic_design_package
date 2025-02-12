@@ -11,8 +11,6 @@ export 'foundation/styles.dart';
 
 // Exports de Atoms
 export 'atoms/button.dart';
-export 'atoms/icon.dart';
-export 'atoms/text.dart';
 export 'atoms/input_field.dart';
 
 // Exports de Molecules
