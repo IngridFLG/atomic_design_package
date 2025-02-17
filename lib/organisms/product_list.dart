@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
-import '../molecules/product_search_bar.dart';
 import '../molecules/product_card.dart';
-import '../models/product.dart';
+import '../molecules/product_search_bar.dart';
 
 /// Organismo: Lista de productos con buscador.
 class ProductListOrganism extends StatelessWidget {
-  final List<Product> products; // Ahora recibe una lista de `Product`
+  final List<Map<String, dynamic>> products;
   final TextEditingController searchController;
-  final Function(Product) onProductTap;
   final Function(String) onSearchChanged;
+  final Function(Map<String, dynamic>) onProductTap;
 
   const ProductListOrganism({
     super.key,
     required this.products,
     required this.searchController,
-    required this.onProductTap,
     required this.onSearchChanged,
+    required this.onProductTap,
   });
 
   @override
@@ -30,9 +29,13 @@ class ProductListOrganism extends StatelessWidget {
           child: ListView.builder(
             itemCount: products.length,
             itemBuilder: (context, index) {
+              final product = products[index];
+
               return ProductCardMolecule(
-                product: products[index],
-                onTap: () => onProductTap(products[index]),
+                title: product['title'],
+                imageUrl: product['image'],
+                price: product['price'],
+                onTap: () => onProductTap(product),
               );
             },
           ),

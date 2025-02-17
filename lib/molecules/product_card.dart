@@ -2,16 +2,19 @@ import 'package:flutter/material.dart';
 import '../atoms/product_image.dart';
 import '../tokens/typography.dart';
 import '../tokens/colors.dart';
-import '../models/product.dart';
 
 /// Molécula: Tarjeta de producto.
 class ProductCardMolecule extends StatelessWidget {
-  final Product product; // Ahora recibe un objeto Product
+  final String title;
+  final String imageUrl;
+  final double price;
   final VoidCallback onTap;
 
   const ProductCardMolecule({
     super.key,
-    required this.product,
+    required this.title,
+    required this.imageUrl,
+    required this.price,
     required this.onTap,
   });
 
@@ -23,9 +26,12 @@ class ProductCardMolecule extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ListTile(
         contentPadding: const EdgeInsets.all(12.0),
-        leading: AtomicProductImage(imageUrl: product.image),
-        title: Text(product.title, style: AppTypography.body),
-        subtitle: Text("\$${product.price}", style: AppTypography.heading.copyWith(color: AppColors.primary)),
+        leading: AtomicProductImage(imageUrl: imageUrl),
+        title: Text(title, style: AppTypography.body),
+        subtitle: Text(
+          "\$${price.toStringAsFixed(2)}",
+          style: AppTypography.heading.copyWith(color: AppColors.primary),
+        ),
         onTap: onTap,
       ),
     );

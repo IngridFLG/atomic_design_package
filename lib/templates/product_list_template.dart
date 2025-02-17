@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import '../organisms/product_list.dart';
-import '../models/product.dart';
 
 /// Template para la lista de productos con un buscador.
 class ProductListTemplate extends StatelessWidget {
-  final List<Product> products;
+  final List<Map<String, dynamic>> products;
   final TextEditingController searchController;
   final Function(String) onSearchChanged;
-  final Function(Product) onProductTap;
+  final Function(Map<String, dynamic>) onProductTap;
 
   const ProductListTemplate({
     super.key,

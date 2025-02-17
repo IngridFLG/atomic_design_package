@@ -1,22 +1,33 @@
 import 'package:flutter/material.dart';
 import '../templates/product_detail_template.dart';
-import '../models/product.dart';
 
 /// Página: Recibe los datos desde el `Screen`, sin manejar lógica.
 class ProductDetailPage extends StatelessWidget {
-  final Product product;
+  final String title;
+  final String category;
+  final String imageUrl;
+  final double price;
+  final String description;
   final VoidCallback onAddToCart;
 
   const ProductDetailPage({
     super.key,
-    required this.product,
+    required this.title,
+    required this.category,
+    required this.imageUrl,
+    required this.price,
+    required this.description,
     required this.onAddToCart,
   });
 
   @override
   Widget build(BuildContext context) {
     return ProductDetailTemplate(
-      product: product,
+      title: title,
+      category: category,
+      imageUrl: imageUrl,
+      price: price,
+      description: description,
       onAddToCart: onAddToCart,
     );
   }

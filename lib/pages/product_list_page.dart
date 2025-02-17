@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import '../templates/product_list_template.dart';
-import '../models/product.dart';
 
 /// Página que contiene la estructura de la lista de productos.
 class ProductListPage extends StatelessWidget {
-  final List<Product> products;
+  final List<Map<String, dynamic>> products;
   final TextEditingController searchController;
-  final Function(Product) onProductTap;
+  final Function(Map<String, dynamic>) onProductTap;
   final Function(String) onSearchChanged;
 
   const ProductListPage({
