@@ -27,3 +27,6 @@ export 'templates/auth_template.dart';
 // Exports de Pages
 export 'pages/login_page.dart';
 export 'pages/register_page.dart';
+export 'pages/bottom_nav_page.dart';
+export 'pages/product_detail_page.dart';
+export 'pages/product_list_page.dart';
