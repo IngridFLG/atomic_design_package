@@ -1,4 +1,4 @@
-import 'package:example/screens/product_list_screen.dart';
+import 'package:example/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:atomic_design_package/pages/bottom_nav_page.dart';
 
@@ -33,9 +33,9 @@ class NavigationHandlerState extends State<NavigationHandler> {
 
   /// Lista de páginas a mostrar en la navegación inferior.
   final List<Widget> _pages = [
-    const ProductListScreen(),
-    const ProductListScreen(),
-    const ProductListScreen(),
+    const ProfileScreen(),
+    const ProfileScreen(),
+    const ProfileScreen(),
   ];
 
   /// Actualiza la página seleccionada.
