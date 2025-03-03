@@ -51,6 +51,12 @@ class BottomNavBarOrganism extends StatelessWidget {
             isSelected: selectedIndex == 2,
             onTap: () => onItemSelected(2),
           ),
+          NavItemMolecule(
+            icon: Icons.shopping_cart,
+            label: "Carrito",
+            isSelected: selectedIndex == 3,
+            onTap: () => onItemSelected(3),
+          ),
         ],
       ),
     );
