@@ -31,3 +31,4 @@ export 'pages/bottom_nav_page.dart';
 export 'pages/product_detail_page.dart';
 export 'pages/product_list_page.dart';
 export 'pages/profile_page.dart';
+export 'pages/category_list_page.dart';
