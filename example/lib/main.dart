@@ -1,6 +1,6 @@
-import 'package:example/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:atomic_design_package/pages/bottom_nav_page.dart';
+import 'package:example/screens/category_list_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,9 +33,10 @@ class NavigationHandlerState extends State<NavigationHandler> {
 
   /// Lista de páginas a mostrar en la navegación inferior.
   final List<Widget> _pages = [
-    const ProfileScreen(),
-    const ProfileScreen(),
-    const ProfileScreen(),
+    const CategoryListScreen(), // Pantalla de categorías
+    const CategoryListScreen(), // Simulación de otra pantalla
+    const CategoryListScreen(),
+    const CategoryListScreen(), // Otra pantalla de prueba
   ];
 
   /// Actualiza la página seleccionada.
