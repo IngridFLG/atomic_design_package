@@ -33,8 +33,6 @@ class ProfileTemplate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100],
-      appBar: AppBar(title: const Text("Perfil de Usuario")),
       body: ProfileContentOrganism(
         imageUrl: imageUrl,
         firstname: firstname,
