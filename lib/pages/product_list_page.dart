@@ -19,7 +19,7 @@ class ProductListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Lista de Productos')),
+      appBar: AppBar(title: const Text('Lista de Productos'), automaticallyImplyLeading: false),
       body: ProductListTemplate(
         products: products,
         searchController: searchController,
